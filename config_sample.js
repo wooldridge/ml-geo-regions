@@ -48,89 +48,14 @@ config.restSetup = {
 
 config.searchSetup = {
   "options": {
-    "search-option": [
-      "unfiltered"
-    ],
-    "page-length": 10,
-    "term": {
-      "apply": "term",
-      "empty": {
-        "apply": "all-results"
-      },
-      "term-option": [
-        "punctuation-insensitive"
-      ]
-    },
     "constraint": [
       {
-        "name": "doc",
-        "range": {
-          "collation": "http://marklogic.com/collation/",
-          "type": "xs:string",
-          "facet": false,
-          "element": {
-            "ns": "",
-            "name": "doc"
-          }
-        }
-      },
-      {
-        "name": "title",
-        "range": {
-          "collation": "http://marklogic.com/collation/",
-          "type": "xs:string",
-          "facet": false,
-          "element": {
-            "ns": "",
-            "name": "title"
-          }
-        }
-      },
-      {
-        "name": "description",
-        "range": {
-          "collation": "http://marklogic.com/collation/",
-          "type": "xs:string",
-          "facet": false,
-          "element": {
-            "ns": "",
-            "name": "description"
-          }
+        "name": "test",
+        "geo-region-path": {
+          "path-index": "/region"
         }
       }
-    ],
-    "transform-results": {
-      "apply": "snippet",
-      "preferred-elements": {
-        "element": [
-          {
-            "ns": "",
-            "name": "description"
-          },
-          {
-            "ns": "",
-            "name": "title"
-          }
-        ]
-      },
-      "max-matches": "3",
-      "max-snippet-chars": "250",
-      "per-match-tokens": "20"
-    },
-    "return-query": true,
-    "extract-metadata": {
-      "constraint-value": [
-        {
-          "ref": "doc"
-        },
-        {
-          "ref": "title"
-        },
-        {
-          "ref": "description"
-        }
-      ]
-    }
+    ]
   }
 };
 

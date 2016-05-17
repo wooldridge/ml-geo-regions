@@ -83,6 +83,7 @@ function createREST() {
   rp(options)
     .then(function (parsedBody) {
       console.log('REST instance created at port: ' + config.restSetup["rest-api"]["port"]);
+      //createOptions();
       loadData();
     })
     .catch(function (err) {
@@ -90,26 +91,26 @@ function createREST() {
     });
 }
 
-// function createOptions() {
-//   var options = {
-//     method: 'PUT',
-//     uri: 'http://' + config.host + ':' + config.restSetup["rest-api"]["port"] + '/v1/config/query/taxonomy',
-//     body: config.searchSetup,
-//     json: true,
-//     headers: {
-//       'Content-Type': 'application/json'
-//     },
-//     auth: config.auth
-//   };
-//   rp(options)
-//     .then(function (parsedBody) {
-//       console.log('Search options created');
-//       loadTransforms();
-//     })
-//     .catch(function (err) {
-//       console.log(JSON.stringify(err, null, 2));
-//     });
-// }
+function createOptions() {
+  var options = {
+    method: 'PUT',
+    uri: 'http://' + config.host + ':' + config.restSetup["rest-api"]["port"] + '/v1/config/query/options',
+    body: config.searchSetup,
+    json: true,
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    auth: config.auth
+  };
+  rp(options)
+    .then(function (parsedBody) {
+      console.log('Search options created');
+      loadData();
+    })
+    .catch(function (err) {
+      console.log(JSON.stringify(err, null, 2));
+    });
+}
 
 // var transformsPath = config.path + 'transforms/'
 //     transformsFiles = fs.readdirSync(transformsPath),
