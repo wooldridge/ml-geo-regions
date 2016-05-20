@@ -9,7 +9,7 @@ config.server = {
 };
 
 config.database = {
-  "name": "ml-sem-taxonomy",
+  "name": "ml-geo-regions",
   "port": 8562
 };
 
@@ -45,19 +45,6 @@ config.restSetup = {
     "error-format": "json"
   }
 }
-
-config.searchSetup = {
-  "options": {
-    "constraint": [
-      {
-        "name": "test",
-        "geo-region-path": {
-          "path-index": "/region"
-        }
-      }
-    ]
-  }
-};
 
 if (typeof module !== 'undefined' && typeof module.exports !== 'undefined') {
   module.exports = config;
