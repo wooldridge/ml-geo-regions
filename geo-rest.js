@@ -2,7 +2,7 @@ var config = require('./config'),
     should = require('should'),
     rp = require('request-promise');
 
-describe('geo-region', function() {
+describe('geo-rest', function() {
 
   var cities = {
     "Mexico City": {
