@@ -28,6 +28,19 @@ config.databaseSetup = {
       "geohash-precision": "3",
       "invalid-values": "ignore"
     }
+  ],
+  "geospatial-element-pair-index": [
+    {
+      "parent-namespace-uri": "",
+      "parent-localname": "point",
+      "latitude-namespace-uri": "",
+      "latitude-localname": "latitude",
+      "longitude-namespace-uri": "",
+      "longitude-localname": "longitude",
+      "coordinate-system": "wgs84",
+      "range-value-positions": false,
+      "invalid-values": "ignore"
+   }
   ]
 };
 
