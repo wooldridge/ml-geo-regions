@@ -1,0 +1,8 @@
+{
+  "name": "Mexico City",
+  "point": {
+    "latitude": 19.429297983081977,
+    "longitude": -99.140625
+  },
+  "within": "/mexico.json"
+}
