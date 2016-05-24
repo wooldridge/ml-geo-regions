@@ -19,6 +19,7 @@
   "dependencies": {
     "mocha": "^2.4.5",
     "request-promise": "^3.0.0",
-    "should": "^8.3.2"
+    "should": "^8.3.2",
+    "marklogic": "^1.0.5"
   }
 }
