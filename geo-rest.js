@@ -63,6 +63,7 @@ describe('geo-rest', function() {
         }]
       }
     };
+    //console.log(JSON.stringify(body, null, 2));
     var options = {
       method: 'POST',
       uri: 'http://' + config.host + ':' + config.restSetup["rest-api"]["port"] + '/v1/search',
@@ -110,7 +111,7 @@ describe('geo-rest', function() {
     };
     rp(options)
       .then(function (result) {
-        //console.log(JSON.stringify(result, null, 2));
+        console.log(JSON.stringify(result, null, 2));
         result.total.should.equal(2);
         result.results[0].uri.should.equalOneOf(toTest.overlaps);
         result.results[1].uri.should.equalOneOf(toTest.overlaps);

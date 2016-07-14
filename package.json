@@ -20,6 +20,6 @@
     "mocha": "^2.4.5",
     "request-promise": "^3.0.0",
     "should": "^8.3.2",
-    "marklogic": "^1.0.5"
+    "marklogic": "git://github.com/wooldridge/node-client-api.git#EA3-features/geo-search"
   }
 }

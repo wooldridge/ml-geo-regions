@@ -4,5 +4,8 @@
     "latitude": 41.881832,
     "longitude": -87.623177
   },
+  "gElemChildParent": {
+    "gElemChildPoint": "41.881832,-87.623177"
+  },
   "within": "/usa.json"
 }
